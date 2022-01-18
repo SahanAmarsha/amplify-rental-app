@@ -17,6 +17,7 @@ export { default as Ampligram } from "./Ampligram";
 export { default as CardG } from "./CardG";
 export { default as MarketingFooter } from "./MarketingFooter";
 export { default as SideBar } from "./SideBar";
+export { default as Footer } from "./Footer";
 export { default as Features2x3 } from "./Features2x3";
 export { default as EditProfile } from "./EditProfile";
 export { default as HeroLayout1 } from "./HeroLayout1";

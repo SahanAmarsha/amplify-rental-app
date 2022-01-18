@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import {CardB} from './ui-components';
 import MyNavbar from './my-components/MyNavBar';
+import MyFooter from './my-components/MyFooter';
 import './App.css';
 import {useEffect, useState} from "react";
 import {API, graphqlOperation} from "aws-amplify";
@@ -34,6 +35,7 @@ const App = () => {
                     <CardB key={home.id} home={home} />
                 ))}
             </div>
+            <MyFooter width={"100vw"} />
         </div>
     );
 }
