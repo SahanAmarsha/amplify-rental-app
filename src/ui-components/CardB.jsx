@@ -9,7 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function CardB(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const { home, overrides: overridesProp, ...rest } = props;
   const overrides = { ...overridesProp };
   return (
     <Flex
@@ -30,6 +30,7 @@ export default function CardB(props) {
         alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
+        src={home?.imageUrl}
         {...getOverrideProps(overrides, "Flex.Image[0]")}
       ></Image>
       <Flex
@@ -65,7 +66,7 @@ export default function CardB(props) {
             alignSelf="stretch"
             position="relative"
             padding="0px 0px 0px 0px"
-            children="$99 USD"
+            children={`${"$"}${home?.price}${" USD"}`}
             {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[0]")}
           ></Text>
           <Text
@@ -84,26 +85,8 @@ export default function CardB(props) {
             alignSelf="stretch"
             position="relative"
             padding="0px 0px 0px 0px"
-            children="4bds 3 ba 2,530 sqft - Active"
+            children={home?.address}
             {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[1]")}
-          ></Text>
-          <Text
-            fontFamily="Inter"
-            fontSize="14px"
-            fontWeight="400"
-            color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
-            lineHeight="24px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            width="288px"
-            shrink="0"
-            alignSelf="stretch"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            children="832 34th Ave, Seattle, WA 98122"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[2]")}
           ></Text>
         </Flex>
       </Flex>
