@@ -19,7 +19,7 @@ export { default as MarketingFooter } from "./MarketingFooter";
 export { default as SideBar } from "./SideBar";
 export { default as Footer } from "./Footer";
 export { default as Features2x3 } from "./Features2x3";
-export { default as EditProfile } from "./EditProfile";
+export { default as AddHomeForm } from "./AddHomeForm";
 export { default as HeroLayout1 } from "./HeroLayout1";
 export { default as HeroLayout4 } from "./HeroLayout4";
 export { default as HeroLayout2 } from "./HeroLayout2";

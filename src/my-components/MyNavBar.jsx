@@ -8,15 +8,19 @@
 import React from "react";
 import {getOverrideProps} from "@aws-amplify/ui-react/internal";
 import {
+    Button,
     Flex,
     IconNotifications,
     Image,
     SearchField,
     Text,
 } from "@aws-amplify/ui-react";
+import { useNavigate } from 'react-router-dom';
 
 export default function NavBar(props) {
     const {overrides: overridesProp, ...rest} = props;
+    const navigate = useNavigate();
+
     const overrides = {...overridesProp};
     return (
         <Flex
@@ -69,6 +73,25 @@ export default function NavBar(props) {
                     children="logo"
                     {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
                 >Home Rental App</Text>
+                <Button
+                    onClick={() => {
+                        navigate("/")
+                    }}
+                    ariaLabel=""
+                    variation="link"
+                    style={{margin: "1rem 0.5rem"}}
+                >
+                    Dashboard
+                </Button>
+                <Button
+                    onClick={() => {
+                        navigate("/add-home");
+                    }}
+                    variation="link"
+                    style={{margin: "1rem 0.5rem"}}
+                >
+                    Add New Home
+                </Button>
             </Flex>
             <Flex
                 gap="32px"
