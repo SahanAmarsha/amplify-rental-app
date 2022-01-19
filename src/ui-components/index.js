@@ -26,6 +26,7 @@ export { default as HeroLayout2 } from "./HeroLayout2";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as ProfileA } from "./ProfileA";
 export { default as FeaturesText2x2 } from "./FeaturesText2x2";
+export { default as NewHomes } from "./NewHomes";
 export { default as ContactUs } from "./ContactUs";
 export { default as SocialA } from "./SocialA";
 export { default as CardD } from "./CardD";

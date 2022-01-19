@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import {CardB} from './ui-components';
+import {CardB, NewHomes} from './ui-components';
 import MyNavbar from './my-components/MyNavBar';
 import MyFooter from './my-components/MyFooter';
 import './App.css';
@@ -28,14 +28,15 @@ const App = () => {
     return (
         <div className="App">
             <header className="App-header">
-                <MyNavbar width={"100vw"} />
+                <MyNavbar width={"100vw"}/>
             </header>
             <div className="app-body">
-                {homes?.map((home) =>(
-                    <CardB key={home.id} home={home} />
-                ))}
+                <NewHomes/>
+                {/*{homes?.map((home) =>(*/}
+                {/*    <CardB key={home.id} home={home} />*/}
+                {/*))}*/}
             </div>
-            <MyFooter width={"100vw"} />
+            <MyFooter width={"100vw"}/>
         </div>
     );
 }
