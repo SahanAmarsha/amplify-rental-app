@@ -92,7 +92,23 @@ export default function AddHomeForm(props) {
             padding="0px 0px 0px 0px"
             {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1].Image[0]")}
           ></Image>
-
+          <Text
+            fontFamily="Inter"
+            fontSize="16px"
+            fontWeight="400"
+            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            lineHeight="22px"
+            textAlign="left"
+            display="flex"
+            direction="column"
+            justifyContent="flex-start"
+            textDecoration="underline"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            children="Upload New Image"
+            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1].Text[0]")}
+          ></Text>
         </Flex>
         <Flex
           gap="16px"

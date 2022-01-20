@@ -19,6 +19,10 @@ const AddHome = () => {
 
     const saveHome = async () => {
         try {
+            // saving image using s3 storage
+
+
+            // saving details using app sync API
 
         } catch (err) {
 
