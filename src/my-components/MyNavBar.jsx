@@ -10,12 +10,14 @@ import {getOverrideProps} from "@aws-amplify/ui-react/internal";
 import {
     Button,
     Flex,
-    IconNotifications,
+    IconExitToApp,
     Image,
     SearchField,
     Text,
 } from "@aws-amplify/ui-react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
+import { Redirect } from 'react-router';
+import {Auth} from "aws-amplify";
 
 export default function NavBar(props) {
     const {overrides: overridesProp, ...rest} = props;
@@ -116,7 +118,8 @@ export default function NavBar(props) {
                     variation="default"
                     {...getOverrideProps(overrides, "Flex.Flex[1].SearchField[0]")}
                 ></SearchField>
-                <IconNotifications
+                <IconExitToApp
+                    style={{cursor: "pointer"}}
                     width="24px"
                     height="24px"
                     shrink="0"
@@ -126,8 +129,8 @@ export default function NavBar(props) {
                     color="rgba(51.00000075995922,51.00000075995922,51.00000075995922,1)"
                     type="notifications"
                     fontSize="24px"
-                    {...getOverrideProps(overrides, "Flex.Flex[1].IconNotifications[0]")}
-                ></IconNotifications>
+                    {...getOverrideProps(overrides, "Flex.Flex[1].IconExitToApp[0]")}
+                ></IconExitToApp>
                 <Image
                     src="https://www.bootdey.com/app/webroot/img/Content/avatar/avatar1.png"
                     width="45px"
