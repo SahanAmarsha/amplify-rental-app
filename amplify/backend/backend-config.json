@@ -55,5 +55,12 @@
         ]
       }
     }
+  },
+  "storage": {
+    "s3rentalappstoragedt1jljkzstpf4": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
+    }
   }
 }

@@ -18,7 +18,7 @@ import {
 } from "@aws-amplify/ui-react";
 
 export default function MyAddHomeForm(props) {
-    const {overrides: overridesProp, onImageUpload, image, ...rest} = props;
+    const {overrides: overridesProp, onImageUpload, image, onSubmit, ...rest} = props;
     const overrides = {...overridesProp};
     return (
         <Flex
@@ -151,6 +151,7 @@ export default function MyAddHomeForm(props) {
                     {...getOverrideProps(overrides, "Flex.Flex[0].Flex[3]")}
                 >
                     <Button
+                        onClick={onSubmit}
                         padding="8px 16px 8px 16px"
                         display="flex"
                         shrink="0"

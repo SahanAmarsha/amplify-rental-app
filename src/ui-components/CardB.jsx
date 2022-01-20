@@ -5,12 +5,31 @@
  **************************************************************************/
 
 /* eslint-disable */
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
+import { Storage } from "@aws-amplify/storage";
+
 export default function CardB(props) {
   const { home, overrides: overridesProp, ...rest } = props;
+  const [image, setImage] = useState("");
   const overrides = { ...overridesProp };
+
+  const getImage = async () => {
+    try {
+      const imageLink = await Storage.get(home.imageUrl);
+      setImage(imageLink);
+    } catch (e) {
+      console.log('error', e);
+    }
+
+  }
+
+  useEffect(() => {
+    getImage();
+  }, []);
+
+
   return (
     <Flex
       gap="0"
@@ -30,7 +49,7 @@ export default function CardB(props) {
         alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
-        src={home?.imageUrl}
+        src={image}
         {...getOverrideProps(overrides, "Flex.Image[0]")}
       ></Image>
       <Flex

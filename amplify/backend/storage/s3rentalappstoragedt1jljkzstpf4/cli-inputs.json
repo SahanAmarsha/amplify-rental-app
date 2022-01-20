@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3rentalappstoragedt1jljkzstpf4",
+  "bucketName": "rental-app-storage-dt1jljkzstpf4",
+  "policyUUID": "32f4f262",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}
